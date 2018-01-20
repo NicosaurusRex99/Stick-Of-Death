@@ -1,0 +1,37 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"EDY",
+		"#BC",
+		"X#A"
+	],
+	"key": {
+		"X": {
+			"item": "minecraft:stick"
+		},
+		"#": {
+			"item": "minecraft:nether_star"
+		},
+		"Y": {
+			"item": "minecraft:emerald_block"
+		},
+		"A": {
+			"item": "minecraft:redstone_block"
+		},
+		"B": {
+			"item": "minecraft:diamond_block"
+		},
+		"C": {
+			"item": "minecraft:gold_block"
+		},
+		"D": {
+			"item": "minecraft:iron_block"
+		},
+		"E": {
+			"item": "minecraft:obsidian"
+		}
+	},
+	"result": {
+		"item": "stickofdeath:stick_death"
+	}
+}
