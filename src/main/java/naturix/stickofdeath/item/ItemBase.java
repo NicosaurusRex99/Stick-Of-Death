@@ -4,7 +4,6 @@ import naturix.stickofdeath.StickOfDeath;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.ActionResult;
@@ -17,20 +16,20 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemBase extends ItemSword {
 
 	protected String name;
-
+	
 	public ItemBase(String name) {
 		super(StickOfDeath.SODToolMaterial);
 		this.name = name;
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		this.setMaxStackSize(1);
-		
+		this.shouldRotateAroundWhenRendering();
 	}
 	
 	public void registerItemModel() {
 		StickOfDeath.proxy.registerItemRenderer(this, 0, name);
 	}
-	
+
 	@Override
 	public ItemBase setCreativeTab(CreativeTabs tab) {
 		super.setCreativeTab(tab);

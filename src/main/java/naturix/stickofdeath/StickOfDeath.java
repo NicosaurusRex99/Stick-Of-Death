@@ -18,10 +18,10 @@ public class StickOfDeath
 {
 	public static final String MODID = "stickofdeath";
     public static final String NAME = "Stick of Death";
-    public static final String VERSION = "1.12.2.0";
+    public static final String VERSION = "1.12.2.1";
 
     public static final Item.ToolMaterial SODToolMaterial = EnumHelper.addToolMaterial("SOD", 9001, 4096, 40, 8997, 42);
-    
+	
     @SidedProxy(clientSide = "naturix.stickofdeath.proxy.ClientProxy", serverSide = "naturix.stickofdeath.proxy.ServerProxy")
     public static CommonProxy proxy;
 

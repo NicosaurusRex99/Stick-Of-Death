@@ -8,7 +8,7 @@ import net.minecraftforge.common.config.Configuration;
 public class Config {
 
     private static final String CATEGORY_GENERAL = "general";
-
+    public static boolean opStick; 
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
         try {
@@ -25,6 +25,7 @@ public class Config {
 
     private static void initGeneralConfig(Configuration cfg) {
         cfg.addCustomCategoryComment(CATEGORY_GENERAL, "General configuration");
+        cfg.getBoolean("opStick", CATEGORY_GENERAL, true, "set to false for a weaker stick");
         }
 
 
