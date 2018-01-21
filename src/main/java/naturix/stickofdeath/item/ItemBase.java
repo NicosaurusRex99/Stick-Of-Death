@@ -19,7 +19,7 @@ public class ItemBase extends ItemSword {
 	protected String name;
 
 	public ItemBase(String name) {
-		super(Item.ToolMaterial.DIAMOND);
+		super(StickOfDeath.SODToolMaterial);
 		this.name = name;
 		setUnlocalizedName(name);
 		setRegistryName(name);
