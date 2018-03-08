@@ -3,7 +3,7 @@ package naturix.stickofdeath.proxy;
 import java.io.File;
 
 import naturix.stickofdeath.Config;
-import net.minecraft.block.Block;
+import naturix.stickofdeath.item.StickOfDeathStick;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
@@ -31,6 +31,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 	        }
 	    }
 
+	    @SubscribeEvent
+	    public static void registerItems(RegistryEvent.Register<Item> event) {
+	        event.getRegistry().register(new StickOfDeathStick());
+	    }
 	    public void registerItemRenderer(Item item, int meta, String id) {
 	    }
 	}

@@ -1,5 +1,9 @@
 package naturix.stickofdeath.item;
 
+import java.util.Random;
+
+import naturix.stickofdeath.Config;
+import naturix.stickofdeath.ModSounds;
 import naturix.stickofdeath.StickOfDeath;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,28 +17,18 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemBase extends ItemSword {
+public class StickOfDeathStick extends ItemSword {
 
-	protected String name;
-	
-	public ItemBase(String name) {
+	private Random rand;
+
+	public StickOfDeathStick() {
 		super(StickOfDeath.SODToolMaterial);
-		this.name = name;
-		setUnlocalizedName(name);
-		setRegistryName(name);
+		setRegistryName("stick_death");
+        setUnlocalizedName(StickOfDeath.MODID + ".stick_death");
 		this.setMaxStackSize(1);
-		this.shouldRotateAroundWhenRendering();
+		this.setCreativeTab(CreativeTabs.COMBAT);
 	}
 	
-	public void registerItemModel() {
-		StickOfDeath.proxy.registerItemRenderer(this, 0, name);
-	}
-
-	@Override
-	public ItemBase setCreativeTab(CreativeTabs tab) {
-		super.setCreativeTab(tab);
-		return this;
-	}
 	@SideOnly(Side.CLIENT)
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
@@ -47,15 +41,9 @@ public class ItemBase extends ItemSword {
 		int i = (int) (entity.prevPosX + (entity.posX - entity.prevPosX) * (double) var4);
 		int j = (int) (entity.prevPosY + (entity.posY - entity.prevPosY) * (double) var4 + 1.62D);
 		int k = (int) (entity.prevPosZ + (entity.posZ - entity.prevPosZ) * (double) var4);
-
-		if (true) {
-			try {
-				java.awt.Desktop.getDesktop().browse(new java.net.URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
-			} catch (Exception e) {
-				e.printStackTrace();
+			if (Config.troll = true) {
+				entity.playSound(ModSounds.rickroll, 0.8F, 1F);
 			}
-		}
-
 		return ar;
 	}
 }

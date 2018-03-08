@@ -1,0 +1,8 @@
+{
+"rickroll": { 
+        "category": "player", 
+        "sounds": ["stickofdeath:rickroll"], 
+        "subtitle": "rickroll.subtitle.rickroll" ,
+        "stream": true
+    }
+}

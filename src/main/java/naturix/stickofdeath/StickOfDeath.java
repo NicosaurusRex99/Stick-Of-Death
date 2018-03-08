@@ -50,7 +50,7 @@ public class StickOfDeath
 	
 		@SubscribeEvent
 		public static void registerItems(RegistryEvent.Register<Item> event) {
-			ModItems.register(event.getRegistry());
+			
 		}
 	
 	}

@@ -1,21 +1,16 @@
 package naturix.stickofdeath;
 
-import naturix.stickofdeath.item.ItemBase;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraftforge.registries.IForgeRegistry;
+import naturix.stickofdeath.item.StickOfDeathStick;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems {
-
-	public static ItemBase stickOfDeath = new ItemBase("stick_death").setCreativeTab(CreativeTabs.COMBAT);
-
-	public static void register(IForgeRegistry<Item> registry) {
-		registry.registerAll(
-				stickOfDeath
-		);
-	}
-
-	public static void registerModels() {
-		stickOfDeath.initModel();
-	}
+	@GameRegistry.ObjectHolder("stickofdeath:stick_death")
+    public static StickOfDeathStick stickdeath;
+	
+	@SideOnly(Side.CLIENT)
+    public static void initModels() {
+        stickdeath.initModel();
+    }
 }
